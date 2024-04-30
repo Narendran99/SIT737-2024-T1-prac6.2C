@@ -1,1 +1,2 @@
-# SIT737-2024-T1-prac6.2C
+# SIT737-2024-T1-prac4.2C
+ Calculator with additional arithmatic operations

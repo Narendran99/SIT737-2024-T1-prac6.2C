@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calculate-service-deployment
+spec:
+  replicas: 3  # Number of desired replicas (instances) of your application
+  selector:
+    matchLabels:
+      app: calculate-service
+  template:
+    metadata:
+      labels:
+        app: calculate-service
+    spec:
+      containers:
+      - name: calculate-service-container
+        image: nandynaren/calcapp:v2.0  # Replace with your Docker image name and tag
+        ports:
+        - containerPort: 3030  # Port your application is listening on
